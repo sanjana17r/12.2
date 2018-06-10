@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [10,8,12,36];//array is declared
+        var double = numbers.map(function(x){ //array is doubled by using map function
+            return x*2;
+        });
+        var filter = numbers.filter(function(y){ //values greater than 20 are filtered using filter
+            return y>20;
+        });
+
+        var total = filter.reduce(function(sum,value){
+            return sum+value; //values of the array are reduced to one single number.
+
+        },0); //variable sum is initialised to 0.
+        console.log(double);//the doubled array is consoled out
+        console.log(filter);//the filtered array is consoled out
+        console.log(total);//the total of the filtered array is consoled out
+    </script>
+    
+</body>
+</html>
